@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--{% load static %}
+        <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% load django_bootstrap5 %}
+        {% load crispy_forms_tags %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        {% bootstrap_messages %}
+        
+    </head>
+    <body>
+       <!-- <nav>
+            <div class="logo">
+                {% load static %}
+                <a href="{% url 'portfolio:index' %}"><img src=" {% static 'portfolio/pics/anarchy.png' %}"
+                alt="logo" title="logo" class="logo"/></a>
+            </div>
+                    <ul>
+                        <li><a href="{% url 'portfolio:index' %}">HOME</a></li> 
+                        <li><a href="{% url 'portfolio:about' %}">ABOUT</a></li>
+                        <li><a href="{% url 'portfolio:project' %}">PROJECTS</a></li> 
+                        <li><a href="{% url 'portfolio:pricing' %}">PRICING</a></li>
+                        <li><a href="{% url 'portfolio:contact' %}">CONTACT</a></li>
+                </ul>
+        </nav> -->
+        <div class="container-fluid border mb-5">
+        <nav class="navbar navbar-expand-md navbar-light  mb-4 border fixed-top" style="background-color: rgb(27, 245, 27);">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{% url 'portfolio:index' %}">
+                <img src=" {% static 'portfolio/pics/anarchy.png' %}"
+                alt="logo" title="logo" class="logo" width="50" height="40"/>
+              </a>
+        
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+              <div class="collapse navbar-collapse"   id="navbarCollapse"><!-- End of links on left side of navbar -->
+
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio:index' %}">
+                            HOME</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio:about' %}">
+                            ABOUT</a></li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio:project' %}">
+                            PROJECTS</a></li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio:pricing' %}">
+                            PRICING</a></li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio:contact' %}">
+                            CONTACT</a></li>
+                </ul> <!-- End of link on the right side -->
+              </div>
+            </div>
+        </nav><!-- End of navbar -->
+        </div>
+    </body>
+</html>
+
+{% block content %}{% endblock content %}
+<footer id="socials">
+    <p>@Jayko 2000 & Forever...</p>
+    <div class="socials">
+        <a href="https://wa.me/+2348129241128" target="_blank" class="socials">
+            {% load static %}
+            <img src=" {% static 'portfolio/pics/whatsapp.png' %}" alt="whatsapp" title="whatsapp" /> Whatsapp
+        </a> - 
+        <a href="https://www.facebook.com/jesse.akila.92/" target="_blank" class="socials">
+            {% load static %}
+            <img src=" {% static 'portfolio/pics/facebook.png' %}" alt="facebook" title="facebook" /> Facebook
+        </a> - 
+        <a href="https://x.com/akila_jesse" target="_blank" class="socials">
+            {% load static %}
+            <img src=" {% static 'portfolio/pics/twitter.png' %}" alt="x" title="x" /> X (Formerly Twitter)
+        </a>
+    </div>
+</footer>

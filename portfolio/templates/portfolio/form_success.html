@@ -1,0 +1,18 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+
+<html>
+    <div class="container-fluid pt-5">
+    <head>
+        <title>Submitted</title>
+    </head>
+    <body>
+        <h2 class="success"><i>Form Submitted successfully...</i></h2>
+        <p><a href="{% url 'portfolio:contact' %}" class="inlink">Fill form again</a></p>
+        <p><a href="{% url 'portfolio:index' %}" class="inlink">Go Home</a></p>
+    </body>
+    </div>
+</html>
+
+{% endblock content %}
